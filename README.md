@@ -1,34 +1,19 @@
 # Secure Corporate Document Management System using AWS IAM & S3
 
-## Project Overview
-
-This project demonstrates a **real-world, corporate-level implementation** of secure document management on AWS using **IAM and S3**, following **least privilege** and **enterprise security best practices**.
-
-The solution ensures that different teams (HR, Developers, Admins) have **controlled and isolated access** to sensitive documents stored in Amazon S3.
-
----
 
 ## Project Screenshots
 
 ### 🔹 S3 Bucket Creation
 ![S3 Bucket Created](screenshots/s3-bucket-created.png)
 
----
-
 ### 🔹 IAM Users
 ![IAM Users](screenshots/iam-users.png)
-
----
 
 ### 🔹 IAM Groups
 ![IAM Groups](screenshots/iam-groups.png)
 
----
-
 ### 🔹 IAM Policies
 ![IAM Policies](screenshots/policies.png)
-
----
 
 ### 🔹 AWS CLI Testing (Windows)
 ![CLI Tests](screenshots/cli-tests.png)
