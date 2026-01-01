@@ -1,0 +1,38 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowBucketVisibility",
+      "Effect": "Allow",
+      "Action": [
+        "s3:ListAllMyBuckets",
+        "s3:GetBucketLocation"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "AllowHRBucketList",
+      "Effect": "Allow",
+      "Action": "s3:ListBucket",
+      "Resource": "arn:aws:s3:::corp-secure-docs-ashwin",
+      "Condition": {
+        "StringLike": {
+          "s3:prefix": [
+            "",
+            "hr-docs",
+            "hr-docs/*"
+          ]
+        }
+      }
+    },
+    {
+      "Sid": "AllowHRObjectActions",
+      "Effect": "Allow",
+      "Action": [
+        "s3:GetObject",
+        "s3:PutObject"
+      ],
+      "Resource": "arn:aws:s3:::corp-secure-docs-ashwin/hr-docs/*"
+    }
+  ]
+}

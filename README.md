@@ -87,13 +87,16 @@ Permissions are assigned **only to groups**, not directly to users.
 
 ## 📜 IAM Policies
 
-Custom IAM policies enforce **least privilege**:
+Custom IAM policies are stored in the `policies/` directory:
 
-- HR users can only list and access `hr-docs/`
-- Developers have read-only access to `engineering-docs/`
-- Admins have full access
+- `hr-policy.json`  
+  Grants HR users read/write access only to the `hr-docs/` folder.
 
-Policies are available in the `policies/` directory.
+- `developer-policy.json`  
+  Grants Developers read-only access to the `engineering-docs/` folder.
+
+Both policies enforce **least privilege** and include required permissions
+for proper AWS S3 Console and CLI visibility.
 
 ---
 
